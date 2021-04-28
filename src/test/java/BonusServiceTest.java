@@ -33,6 +33,7 @@ class BonusServiceTest {
 
         assertEquals(expected, actual);
     }
+
     @org.junit.jupiter.api.Test
     void shouldCalculateForUnRegisteredAndOverLimit() {
 
@@ -48,6 +49,7 @@ class BonusServiceTest {
 
         assertEquals(expected, actual);
     }
+
     @org.junit.jupiter.api.Test
     void shouldCalculateForUnRegisteredAndUnderLimit() {
 
@@ -63,11 +65,12 @@ class BonusServiceTest {
 
         assertEquals(expected, actual);
     }
+
     @org.junit.jupiter.api.Test
     void shouldCalculateForUnRegisteredAndAmountHas4SignificantDigits() {
-    //результат вычисления service.calculate(amount, registered)
-    //- целое положительно число, округленное в меньшую сторону
-    // при входном параметре amount, имеющим меньше 4 значащих цифры,
+        //результат вычисления service.calculate(amount, registered)
+        //- целое положительно число, округленное в меньшую сторону
+        // при входном параметре amount, имеющим меньше 4 значащих цифры,
         // результат service.calculate(amount, registered) всегда будет 0,
         //в переменной long bonus будет лежать 0, т.к. правая часть выражения получится дробной
 
@@ -83,6 +86,7 @@ class BonusServiceTest {
 
         assertEquals(expected, actual);
     }
+
     @org.junit.jupiter.api.Test
     void shouldCalculateForRegisteredAndAmountHas4SignificantDigits() {
         //результат вычисления service.calculate(amount, registered)
